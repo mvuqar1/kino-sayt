@@ -1,4 +1,4 @@
-const baseUrl = "http://www.omdbapi.com/"
+const baseUrl = "https://www.omdbapi.com/"
 
 export const getMovies = async (searchText, movieId='') => {
     const queryArr = []
