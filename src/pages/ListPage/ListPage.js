@@ -1,9 +1,9 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import './ListPage.css';
 import { getListMovies } from '../../api/getSingleList';
 import { useEffect } from 'react';
 import { getMovies } from '../../api/getMovies';
-import { useParams } from 'react-router-dom';
+
 
 const ListPage = (props) => {
 
@@ -28,7 +28,7 @@ const ListPage = (props) => {
             //     }
             // ]
         })
-    }, [])
+    }, [id])
 
     const getMoviesHandler = async (movies) => {
 
@@ -60,7 +60,7 @@ const ListPage = (props) => {
                         const movieDetails = findDetails(item.imdbID)
                         return (
                             <li className='movie-card' key={item.imdbID}>
-                                <a href={`https://www.imdb.com/title/${item.imdbID}`} target="_blank">{item.Title} ({item.Year})</a>
+                                <a href={`https://www.imdb.com/title/${item.imdbID}`}rel="noopener noreferrer" target="_blank">{item.Title} ({item.Year})</a>
                                 {
                                     movieDetails && (
                                         <p>{movieDetails.Actors}</p>
