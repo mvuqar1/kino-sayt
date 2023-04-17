@@ -60,7 +60,7 @@ const ListPage = (props) => {
                         const movieDetails = findDetails(item.imdbID)
                         return (
                             <li className='movie-card' key={item.imdbID}>
-                                <a href={`https://www.imdb.com/title/${item.imdbID}`}rel="noopener noreferrer" target="_blank">{item.Title} ({item.Year})</a>
+                                <a href={`https://www.imdb.com/title/${item.imdbID}`} rel="noopener noreferrer" target="_blank">{item.Title} ({item.Year})</a>
                                 {
                                     movieDetails && (
                                         <p>{movieDetails.Actors}</p>

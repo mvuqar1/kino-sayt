@@ -24,7 +24,7 @@ const Favorites = ({ data, removeFromFavorites }) => {
             }
         })
         .catch(err => {
-            console.log('err: '. err)
+            console.log(err)
         })
     }
 
