@@ -4,7 +4,7 @@ import './MovieItem.css';
 class MovieItem extends Component {
     render() {
         const {addToFavorites} = this.props
-        const { Title, Year, Poster, imdbID } = this.props.movie;
+        const { Title, Year, Poster } = this.props.movie;
         return (
             <article className="movie-item">
                 <img className="movie-item__poster" src={Poster} alt={Title} />
